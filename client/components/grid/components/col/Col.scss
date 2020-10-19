@@ -1,0 +1,7 @@
+.col {
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-right: 16px;
+    }
+}

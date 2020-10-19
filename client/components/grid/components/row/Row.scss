@@ -1,0 +1,9 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @include media-query(mobile) {
+        display: block;
+    }
+}

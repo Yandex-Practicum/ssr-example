@@ -1,0 +1,9 @@
+@function rem($s: 16px) {
+    $rem: $s / 16px;
+
+    @return $rem * 1rem;
+}
+
+@function ff($ff-name: 'primary') {
+    @return map-get($fonts, $ff-name);
+}

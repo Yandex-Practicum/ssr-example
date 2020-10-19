@@ -1,0 +1,11 @@
+.buttons-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    & > button {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+}

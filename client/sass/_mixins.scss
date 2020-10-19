@@ -1,0 +1,47 @@
+@mixin makeFontFamily($fz: $font-size-base, $font-weight: $font-weight-base, $line-height: $line-height-base, $ff: 'primary') {
+    font-family: ff($ff);
+    font-size: $fz;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin buttonType($firstColor, $secondColor, $textHoverColor: -1) {
+    &_outlined {
+        color: $firstColor;
+        background-color: transparent;
+
+        &:hover {
+            background-color: $firstColor;
+            outline: 0;
+
+            @if $textHoverColor == -1 {
+                color: $secondColor;
+            } @else {
+                color: $textHoverColor;
+            }
+        }
+    }
+
+    &_filled {
+        color: $secondColor;
+        background-color: $firstColor;
+
+        &:hover {
+            background-color: rgba($firstColor, 0.6);
+            color: $firstColor;
+            outline: 0;
+
+            @if $textHoverColor == -1 {
+                color: $secondColor;
+            } @else {
+                color: $textHoverColor;
+            }
+        }
+    }
+}
+
+@mixin media-query($media) {
+    @if $media == mobile {
+        @media (min-width: 320px) and (max-width: 480px) { @content; }
+    }
+}

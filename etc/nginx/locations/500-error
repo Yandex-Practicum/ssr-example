@@ -1,0 +1,4 @@
+error_page 500 502 503 /500.html;
+location = /500.html {
+    root /usr/local/www/common/error-handlers;
+}

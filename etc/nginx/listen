@@ -1,0 +1,3 @@
+listen [::]:443 ssl http2 backlog=2048 ipv6only=off;
+include locations/500-error;
+include ssl;

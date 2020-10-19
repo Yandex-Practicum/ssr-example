@@ -1,0 +1,6 @@
+{
+    "production": "1.0.0",
+    "testing": "1.0.0",
+    "unstable": "0.0.0",
+    "development": "dev"
+}

@@ -1,0 +1,8 @@
+ssi on;
+add_header Strict-Transport-Security "max-age=31536000;";
+ssl_ciphers HIGH:!RC4:!aNULL:!eNULL:!MD5:!EXPORT:!EXP:!LOW:!SEED:!CAMELLIA:!IDEA:!PSK:!SRP:!SSLv2;
+ssl_prefer_server_ciphers on;
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
+ssl_certificate /var/www/ssl/crt.crt;
+ssl_certificate_key /var/www/ssl/key.key;

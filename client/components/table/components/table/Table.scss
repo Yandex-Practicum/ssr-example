@@ -1,0 +1,22 @@
+.tableWrapper {
+    position: relative;
+
+    @include media-query(mobile) {
+        padding-bottom: 60px;
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px auto 0;
+}
+
+.pendingWrapper {
+    justify-content: center;
+    display: flex;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}

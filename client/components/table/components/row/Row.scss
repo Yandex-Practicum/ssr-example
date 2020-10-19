@@ -1,0 +1,23 @@
+.wrapper {
+    height: 48px;
+
+    &:nth-of-type(odd) {
+        background: $lighter;
+    }
+
+    &:hover {
+        &:nth-of-type(odd) {
+            background: $lightest;
+        }
+
+        &:nth-of-type(even) {
+            background: $lightest;
+        }
+    }
+}
+
+.clicker {
+    &:hover {
+        cursor: pointer;
+    }
+}

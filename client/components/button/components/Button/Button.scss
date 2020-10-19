@@ -1,0 +1,44 @@
+.button {
+    @extend %pButton;
+
+    display: inline-flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 14px 30px;
+
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+
+    border-style: none;
+    border-radius: $border-radius;
+    outline: 0;
+
+    font-size: 16px;
+    line-height: 19px;
+
+    &:disabled {
+        background-color: $text-muted;
+    }
+
+    &__primary {
+        @include buttonType($primary, $black);
+    }
+
+    &__secondary {
+        @include buttonType($lightest, $black);
+    }
+
+    &__danger {
+        @include buttonType($danger, $black);
+    }
+
+    &__success {
+        @include buttonType($success, $black);
+    }
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}

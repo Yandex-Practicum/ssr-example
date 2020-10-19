@@ -1,0 +1,26 @@
+%pButton {
+    @include makeFontFamily(rem(20px), 500, (16 / 14), 'light');
+}
+
+%pInput {
+    $focusBorderColor: rgba($primary, 0.9);
+
+    font-family: ff('secondary');
+
+    height: 48px;
+    position: relative;
+    transition: all 0.3s;
+
+    border: 1px solid rgb(226, 226, 226) !important;
+    border-radius: $border-radius !important;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    appearance: none;
+
+    &:focus,
+    &:hover {
+        border-color: $focusBorderColor !important;
+    }
+}

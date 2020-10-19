@@ -1,0 +1,85 @@
+.wrapper {
+    display: block;
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -999999px;
+    z-index: 999;
+    background-color: $white;
+    transition: 0.5s;
+    overflow-y: scroll;
+
+    @include media-query(mobile) {
+        width: 100% !important; // Переопределение стилей элемента
+    }
+
+    &_display {
+        right: 0;
+    }
+}
+
+.content {
+    display: block;
+}
+
+.header {
+    height: 56px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d2d0cc;
+}
+
+.header__title {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 56px;
+}
+
+.header__title_text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.body {
+    height: 100%;
+    overflow: scroll;
+    padding: 16px 24px;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: rgba($black, 0.7);
+    transition: 0.3s;
+    opacity: 0;
+    display: none;
+
+    &_display {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.backArrow {
+    position: relative;
+    left: 16px;
+    cursor: pointer;
+}
+
+.pendingWrapper {
+    justify-content: center;
+    display: flex;
+
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 9999;
+}

@@ -1,0 +1,31 @@
+.head {
+    background: $white;
+    font-family: ff('medium');
+    font-weight: 500;
+    vertical-align: top;
+}
+
+.common {
+    font-weight: normal;
+}
+
+.head,
+.common {
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 19px;
+
+    &:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+
+    &:last-child {
+        border-radius: 0 10px 10px 0;
+
+        @include media-query(mobile) {
+            text-align: right;
+        }
+    }
+}
+
