@@ -26,4 +26,4 @@ RUN npm run init && \
     echo "APP_VERSION=${VERSION}" > .env && \
     npm run build:production && \
     echo "${VERSION}" > .version && \
-    rm -rf @types client lib docker etc scripts server webpack www certs configs && \
+    rm -rf @types client lib docker etc scripts server webpack www certs configs
