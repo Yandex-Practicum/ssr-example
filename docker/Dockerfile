@@ -27,3 +27,5 @@ RUN npm run init && \
     npm run build:production && \
     echo "${VERSION}" > .version && \
     rm -rf @types client lib docker etc scripts server webpack www certs configs
+
+CMD ["/usr/bin/supervisord"]
